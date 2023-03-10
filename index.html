@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <h2 id="content"></h2>
+    <input id="id" type="text">
+    <button onclick="getApi()">API CALL</button>
+    <script>
+        function getApi(){
+            const id = document.getElementById("id").value;
+            fetch(`http://localhost:8080/user/${id}`)
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById('content').innerHTML=data;
+                console.log(data);
+            });
+        }
+    </script>
+</body>
+</html>
