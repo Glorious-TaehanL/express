@@ -1,9 +1,12 @@
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
+
 // app.use(cors());
 app.listen(8080, function () {
   console.log('linstening on 8080');
+  //   console.log(tutorial);
 });
 
 app.get('/', function (req, res) {
@@ -22,3 +25,14 @@ app.get('/user/:id', function (req, res) {
     res.json({ content: 'none' });
   }
 });
+
+class Person extends EventEmitter {
+  constructor(name) {
+    super();
+    this._name = name;
+  }
+
+  get name() {
+    return this._name;
+  }
+}
