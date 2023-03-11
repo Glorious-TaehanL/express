@@ -1,7 +1,7 @@
 <h4> terminal handling </h4>
 <p>
 <hr>
-❓ How to use below things.<br>
+❓ How to use below things.<br><br><br>
 - ✅ readline.question    <br>
 - ✅ readline.setPrompt    <br>
 - ✅ readline.close    <br>
