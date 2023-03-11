@@ -17,8 +17,8 @@ app.get('/user/:id', function (req, res) {
   console.log('id :: ' + id);
 
   if (id == 'ted') {
-    res.json({ 'beauty content': id });
+    res.json({ content: id });
   } else {
-    res.json({ 'beauty content': 'none' });
+    res.json({ content: 'none' });
   }
 });

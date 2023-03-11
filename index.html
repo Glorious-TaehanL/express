@@ -8,15 +8,17 @@
 </head>
 <body>
     <h2 id="content"></h2>
+    <img id="catImg" src="" />
     <input id="id" type="text">
     <button onclick="getApi()">API CALL</button>
     <script>
         function getApi(){
             const id = document.getElementById("id").value;
-            fetch(`http://localhost:8080/user/${id}`)
+            fetch(`http://aws.random.cat/meow`)
             .then((response) => response.json())
             .then((data) => {
-                document.getElementById('content').innerHTML=data;
+                document.getElementById('catImg').src = data.file
+
                 console.log(data);
             });
         }
