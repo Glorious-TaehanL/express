@@ -14,7 +14,7 @@
     <script>
         function getApi(){
             const id = document.getElementById("id").value;
-            fetch(`http://aws.random.cat/meow`)
+            fetch(`https://aws.random.cat/meow`)
             .then((response) => response.json())
             .then((data) => {
                 document.getElementById('catImg').src = data.file
