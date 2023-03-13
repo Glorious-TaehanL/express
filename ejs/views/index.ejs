@@ -1,0 +1,15 @@
+
+<body>
+    <div class="col-lg-4">
+        <h1>You Searched For : <%= data.userQuery %></h1>
+        <% if(data.loggedIn){ %>
+            <h2>You ar loog in as : <%= data.username %> </h2>
+        <% } %>
+        <ul>
+            <% data.searchResult.forEach(result=>{ %>
+                <li> <%= result %></li>
+            <% }); %>
+        </ul>
+        
+    </div>
+</body>
